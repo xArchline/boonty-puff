@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>Boonty Puff</title>
+    <meta name="theme-color" content="#4C5BD4" />
+    <link rel="icon" type="image/png" href="./favicon.png" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.webmanifest" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <style>html,body{background:#6173eb;height:100%;margin:0;overflow:hidden}#game{touch-action:none;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent;width:100%;height:100%;display:block}.corner-btn{top:calc(12px + env(safe-area-inset-top));cursor:pointer;-webkit-tap-highlight-color:transparent;background:#ffffffe6;border:none;border-radius:50%;justify-content:center;align-items:center;width:48px;height:48px;padding:0;display:flex;position:fixed;box-shadow:0 4px 12px #2b233340}.corner-btn.hidden{display:none}.corner-btn svg{width:24px;height:24px}#wardrobe-btn{left:calc(12px + env(safe-area-inset-left))}#options-btn{right:calc(12px + env(safe-area-inset-right))}.menu-backdrop{z-index:10;background:#2b233373;justify-content:center;align-items:center;display:flex;position:fixed;top:0;bottom:0;left:0;right:0}.menu-backdrop.hidden{display:none}.menu-panel{box-sizing:border-box;color:#2b2333;background:#fff9f9;border-radius:28px;width:calc(100% - 32px);max-width:340px;max-height:calc(100% - 64px);padding:28px 22px;font-family:Fredoka,Nunito,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;position:relative;overflow-y:auto;box-shadow:0 12px 32px #2b233340}.menu-panel.hidden{display:none}.menu-close{color:#2b2333;cursor:pointer;background:#2b233314;border:none;border-radius:50%;width:44px;height:44px;font-size:16px;line-height:1;position:absolute;top:14px;right:14px}.menu-panel h2{margin:0 0 18px;font-size:22px;font-weight:700}.toggle-row{justify-content:space-between;align-items:center;padding:10px 0;font-size:16px;display:flex}.toggle{cursor:pointer;background:#d8d8e4;border:none;border-radius:14px;flex:none;width:48px;height:28px;padding:0;transition:background .15s;position:relative}.toggle.on{background:#6173eb}.toggle-knob{background:#fff;border-radius:50%;width:22px;height:22px;transition:transform .15s;position:absolute;top:3px;left:3px;box-shadow:0 1px 3px #0000004d}.toggle.on .toggle-knob{transform:translate(20px)}.menu-footer{text-align:center;color:#2b23338c;margin:20px 0 0;font-size:12px}.menu-sub{color:#2b2333b3;margin:0 0 16px;font-size:14px}.wardrobe-grid{grid-template-columns:1fr 1fr;gap:12px;display:grid}.hat-card{box-sizing:border-box;text-align:center;cursor:pointer;color:inherit;background:#2b23330a;border:3px solid #0000;border-radius:18px;padding:10px;font-family:inherit}.hat-card.selected{border-color:#6173eb}.hat-card.locked{opacity:.55;cursor:default}.hat-card canvas{width:96px;max-width:100%;height:96px;margin:0 auto 6px;display:block}.hat-card .hat-name{font-size:13px;font-weight:700}.hat-card .hat-status{color:#2b233399;margin-top:2px;font-size:12px}.hat-progress{background:#2b233326;border-radius:2px;height:4px;margin-top:6px;overflow:hidden}.hat-progress-fill{background:#6173eb;height:100%}#event-top-badge,#event-mode-badge{left:50%;top:calc(10px + env(safe-area-inset-top));color:#fff;text-align:center;pointer-events:none;z-index:5;font-family:Fredoka,Nunito,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;position:fixed;transform:translate(-50%)}#event-top-badge{top:calc(10px + env(safe-area-inset-top));background:#2b233359;border-radius:14px;padding:6px 14px;font-size:14px;font-weight:700}#event-mode-badge{top:calc(46px + env(safe-area-inset-top));opacity:.75;font-size:11px;font-weight:600}#event-top-badge.hidden,#event-mode-badge.hidden{display:none}#event-enter-btn{left:50%;bottom:calc(28px + env(safe-area-inset-bottom));color:#2b2333;cursor:pointer;-webkit-tap-highlight-color:transparent;z-index:5;background:#ffc933;border:none;border-radius:24px;padding:14px 26px;font-family:Fredoka,Nunito,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:16px;font-weight:700;position:fixed;transform:translate(-50%);box-shadow:0 6px 16px #2b23334d}#event-enter-btn.hidden{display:none}.event-privacy{color:#2b2333a6;margin:4px 0 8px;font-size:12px}.event-privacy a{color:#6173eb;font-weight:600}#share-btn{left:50%;bottom:calc(24px + env(safe-area-inset-bottom));color:#fff;cursor:pointer;-webkit-tap-highlight-color:transparent;z-index:5;background:#6173eb;border:none;border-radius:26px;justify-content:center;align-items:center;gap:10px;height:52px;padding:0 22px;font:700 18px Fredoka,Nunito,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;display:flex;position:fixed;transform:translate(-50%);box-shadow:0 5px #4c5bd4,0 8px 18px #2b23334d}#share-btn svg{width:22px;height:22px}#share-btn:active{transform:translate(-50%)translateY(2px)}#share-btn.hidden{display:none}#share-toast{left:50%;bottom:calc(96px + env(safe-area-inset-bottom));color:#fff;pointer-events:none;z-index:6;opacity:0;background:#2b2333d9;border-radius:14px;padding:8px 16px;font-family:Fredoka,Nunito,system-ui,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Noto Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif;font-size:14px;font-weight:600;transition:opacity .2s;position:fixed;transform:translate(-50%)}#share-toast.visible{opacity:1}.event-field{color:#2b2333bf;margin:0 0 14px;font-size:13px;font-weight:600;display:block}.event-field input[type=text],.event-field input[type=email],.event-field input[type=tel]{box-sizing:border-box;color:#2b2333;background:#fff;border:2px solid #e4e6f5;border-radius:12px;outline:none;width:100%;margin-top:6px;padding:10px 12px;font-family:inherit;font-size:16px;display:block}.event-field input[type=text]:focus,.event-field input[type=email]:focus,.event-field input[type=tel]:focus{border-color:#6173eb}.event-consent{color:#2b2333bf;align-items:flex-start;gap:8px;margin:0 0 12px;font-size:12px;line-height:1.4;display:flex}.event-consent input{flex:none;margin-top:2px}.event-btn-row{gap:10px;margin-top:18px;display:flex}.event-btn{cursor:pointer;border:none;border-radius:16px;flex:1;padding:12px 10px;font-family:inherit;font-size:15px;font-weight:700}.event-btn.primary{color:#fff;background:#6173eb}.event-btn.primary:disabled{cursor:default;background:#cfd4f7}.event-btn.secondary{color:#2b2333;background:#2b233314}.event-btn.danger{color:#fff;background:#ff7a63}.event-score-line{color:#2b2333bf;margin:-8px 0 16px;font-size:15px;font-weight:600}.event-leaderboard{border-collapse:collapse;width:100%;margin-top:6px;font-size:14px}.event-leaderboard td{padding:6px 4px}.event-leaderboard tr.me{background:#6173eb1f;border-radius:8px;font-weight:700}.event-leaderboard td:first-child{color:#2b233380;width:32px}.event-leaderboard td:last-child{text-align:right;font-weight:700}.admin-row{border-bottom:1px solid #2b233314;justify-content:space-between;padding:8px 0;font-size:14px;display:flex}.admin-actions{flex-direction:column;gap:10px;margin-top:18px;display:flex}.admin-error{color:#ff7a63;min-height:18px;margin:-6px 0 8px;font-size:13px;font-weight:600}</style>
+    <script type="module" crossorigin src="./assets/index-fBOfbK5m.js"></script>
+  </head>
+  <body>
+    <canvas id="game"></canvas>
+
+    <button id="wardrobe-btn" class="corner-btn hidden" aria-label="Wardrobe" type="button">
+      <svg viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M5 20 L12 5 L19 20 Z" fill="#FF7A63" stroke="#2B2333" stroke-width="1.8" />
+        <path d="M8.2 13.2 L15.2 11.4 M6.6 16.8 L17 14.2" stroke="#FEE580" stroke-width="2" />
+        <circle cx="12" cy="4" r="2.2" fill="#FEE580" stroke="#2B2333" stroke-width="1.5" />
+      </svg>
+    </button>
+    <button id="options-btn" class="corner-btn hidden" aria-label="Options" type="button">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#2B2333" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"></circle>
+        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+      </svg>
+    </button>
+
+    <div id="menu-backdrop" class="menu-backdrop hidden">
+      <div id="options-panel" class="menu-panel hidden" role="dialog" aria-label="Options">
+        <button class="menu-close" data-close type="button" aria-label="Close">&#10005;</button>
+        <h2>Options</h2>
+        <div class="toggle-row">
+          <span>Sound</span>
+          <button id="sound-toggle" class="toggle" role="switch" type="button">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+        <div class="toggle-row">
+          <span>Vibration</span>
+          <button id="vibration-toggle" class="toggle" role="switch" type="button">
+            <span class="toggle-knob"></span>
+          </button>
+        </div>
+        <p class="menu-footer">Boonty Puff &middot; made for Boonty</p>
+      </div>
+
+      <div id="wardrobe-panel" class="menu-panel hidden" role="dialog" aria-label="Wardrobe">
+        <button class="menu-close" data-close type="button" aria-label="Close">&#10005;</button>
+        <h2>Wardrobe</h2>
+        <p id="wardrobe-coins" class="menu-sub"></p>
+        <div id="wardrobe-grid" class="wardrobe-grid"></div>
+      </div>
+    </div>
+
+    <!-- Event / contest mode: title screen badges -->
+    <div id="event-top-badge" class="hidden"></div>
+    <div id="event-mode-badge" class="hidden"></div>
+
+    <!-- Event / contest mode: bottom entry button -->
+    <button id="event-enter-btn" class="hidden" type="button">&#127942; Enter the contest</button>
+
+    <!-- Score sharing: bottom-right round button -->
+    <button id="share-btn" class="hidden" type="button" aria-label="Share score">
+      <svg viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="18" cy="5" r="3"></circle>
+        <circle cx="6" cy="12" r="3"></circle>
+        <circle cx="18" cy="19" r="3"></circle>
+        <line x1="8.6" y1="10.6" x2="15.4" y2="6.4"></line>
+        <line x1="8.6" y1="13.4" x2="15.4" y2="17.6"></line>
+      </svg>
+      <span>Share my score</span>
+    </button>
+    <div id="share-toast"></div>
+
+    <!-- Event / contest mode: modal panels (separate backdrop from the options/wardrobe menu) -->
+    <div id="event-backdrop" class="menu-backdrop hidden">
+      <div id="event-form-panel" class="menu-panel hidden" role="dialog" aria-label="Enter the contest"></div>
+      <div id="event-result-panel" class="menu-panel hidden" role="dialog" aria-label="Contest result"></div>
+      <div id="admin-pin-panel" class="menu-panel hidden" role="dialog" aria-label="Admin PIN"></div>
+      <div id="admin-panel" class="menu-panel hidden" role="dialog" aria-label="Admin"></div>
+    </div>
+
+  </body>
+</html>
